@@ -222,7 +222,7 @@
                 *@return int|false - if success int returned by number of bytes written to the file else false as file written failure
                 */
                 file_put_contents("user.json", json_encode($registerNewUser),FILE_APPEND);
-                header("Location:http://localhost/login.php?Message=".urlencode("You are registered Successfully as First User."));
+                //header("Location:http://localhost/login.php?Message=".urlencode("You are registered Successfully as First User."));
             }
             else{
                 $registerUser=array("username"=>$username,"emailAddress"=>$emailAddress,"password"=>$passwordEncrypted);
@@ -256,14 +256,10 @@
                 *@param string $string - string contents passed to next page
                 *@return string
                 */
-                header("Location:http://localhost/login.php?Message=".urlencode("You are registered Successfully."));
+               // header("Location:http://localhost/login.php?Message=".urlencode("You are registered Successfully."));
            }
         }
     }
-    ?>
-    <?php    
-        // $Message = $_GET['Message'];
-        // echo $Message;        
     ?>
 </body>
 </html>
